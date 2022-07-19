@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>More on this</title>
+        <meta name="description" content="last page"/>
+        <meta name="keywords" content="Feedback"/>
+        <meta name="author" content="Shreya Gurung"/>
+        <link rel="stylesheet" href="style.css"/>
+    </head>
+    <style>
+        /*internal css to add background image and call class to hide image*/
+        body{
+            background: url(more.jpg);
+            background-size: 100%;
+        }
+        a :hover{
+            color: yellow;
+        }
+        .hide{display: none}
+    </style>
+    <body>
+        <header>
+            <figure class="leftnav">
+                <img class="hide" id="1" src="feedback.jpg" alt="Feedback Please" width="400" height="185"/>
+                <img class="hide" id="2" src="feedback2.jpg" width="400" height="185"/> <br>
+                <button onclick="toggle()">Toggle</button>
+            </figure>
+            <nav>
+                <table class="rightnav" style="width: 50%;margin: auto;">
+                    <tr>
+                        <th class="other">
+                            <a href="home.html">Home</a>
+                        </th>
+                        <th class="other">
+                            <a href="CV.html">CV</a>
+                        </th>
+                        <th class="other">
+                            <a href="Blog.html">Blog</a>
+                        </th>
+                        <th class="other">
+                            <a href="research.html">Research</a>
+                        </th>
+                        <th class="table">
+                            <a href="more.html">More</a>
+                        </th>
+                    </tr>
+                </table>
+            </nav>
+        </header>
+        <br><br><br><br><br><br><br><br><br><br><br><br>
+        <div class="row"><!--creating flex-->
+            <div class="leftcolumn">
+                <div class="card">
+                    <h1>FeedBack Please</h1>
+                    <table border="1" width="100%" >
+                        <td align="center">
+                            <form name="FeedbackForm" onsubmit="Formvalidate()">
+                                <p class="form">First Name:<input type="text" name="firstname"> </p>
+                                <p class="form">Last Name:<input type="text" name="lastname"></p>
+                                <p class="form">Gender:<input type="radio" name="gender" value="male" checked>Male
+                                    <input type="radio" name="gender" value="female">Female
+                                </p>
+                                <p class="form">Did you like the page?<input type="checkbox" name="check" value="yes">Yes
+                                    <input type="checkbox" name="check" value="no">No
+                                </p>
+                                <p class="form">Suggestion:<br><textarea name="suggestion" rows="10" cols="30" placeholder="Write...."></textarea></p>
+                                <p class="form"><input type="submit" value="Send"></p>
+                            </form>
+                        </td>
+                    </table>    
+                </div>
+                <div class="card">
+                    <h1>You made it Till the End. This was my very first portfolio webpage.
+                        I hope you enjoyed the content. Also, make sure to not frget to fill the form above to give your precious feedback.
+                         I will make sure to improve next time</h1>
+                    <h1>Thanks for visiting.</h1>
+                    <h2> Have a great time!</h2>
+
+                        
+                </div>
+            </div>
+            <div class="rightcolumn">
+                <div class="card">
+                    <h2>About ME</h2>
+                    <p class="main"> 
+                        I am a first year Bachleors student pursuing Bachleors in computing at Islington college,Putalisadak. I completely dived into and enjoyed the making of my website and i hope you equally enjoyed going through the content as i di while creating it.
+                    </p>
+                </div>
+                <div class="card">
+                    <table border="1" width=100%>
+                        <td>
+                            <h2>Follow Me On</h2>
+                            <p class="main">
+                                <a href="https://www.facebook.com/" >Facebook</a>
+                            </p>
+                            <p class="main">
+                                <a href="https://www.instagram.com/">Instagram</a>
+                            </p> 
+                            <p class="main">
+                                <a href="https://twitter.com/?lang=en">Twitter</a>
+                            </p> 
+                        </td>
+                    </table>    
+                </div>
+            </div>
+        </div>
+        <footer>
+            &copy;2021 by Shreya Gurung, computing
+        </footer>
+        <script src="main.js"></script> 
+        <script>
+            //after the button in clicked this function is called
+            function toggle(){
+                var p1= document.getElementById("1"); //1st image
+                var p2= document.getElementById("2");//2nd image
+
+                if(p1.style.display=="none"){  //if 1st img is hidden
+                    p1.style.display= "block";  //displays 1st image
+                    p2.style.display="none";    //hides 2nd img
+                }
+                else{                          //if 2nd img is hidden
+                    p1.style.display="none";   //hides 1st
+                    p2.style.display="block";  //displays 2nd img
+                }
+                setTimeout(toggle,1000); //to change the image in every second once toggled
+            }
+            document.getElementById("1").style.display="block" //to show the 1st image by default on opening the page
+        </script>     
+    </body>
+</html>

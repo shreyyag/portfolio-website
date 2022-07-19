@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Welcome</title>
+        <meta name="description" content="homepage"/>
+        <meta name="keywords" content="FirstPage"/>
+        <meta name="author" content="Shreya Gurung"/>
+        <link rel="stylesheet" href="style.css"/>
+    </head>
+    <style>
+        /*internal CSS*/
+        body{
+            background: url(homebg.jpg);
+            background-size: 100%;
+        }
+        .write{
+            font-size: 50px;
+            text-align: center;
+            font-family: 'Times New Roman', Times, serif;
+        }   
+        .home{
+            width: 60%;
+            text-align: center;
+            margin:  auto;
+            padding: 30px;
+            margin-top: 150px; 
+        }  
+        
+        
+    </style>
+    <body>
+        <header>
+            <div class="leftnav"> <!--makes the text float in the left side of the page-->
+                <h1 class="write" style="font-size: 80px; color: white;">HI! THERE</h1>
+            </div>
+            <nav>  <!--creating navigation bar to access all pages-->
+                <table class="rightnav" style="width: 50%; margin: auto;"> 
+                    <tr>     
+                        <th class="table">
+                            <a href="#">Home</a>  
+                        </th>
+                        <th class="other">
+                            <a href="CV.html">CV</a>
+                        </th>
+                        <th class="other">
+                            <a href="blog.html">Blog</a>
+                        </th>
+                        <th class="other">
+                            <a href=research.html>Research</a>
+                        </th>
+                        <th class="other">
+                            <a href="more.html">More</a>
+                        </th>
+                    </tr>
+                </table>
+            </nav>
+        </header>
+        <div class="home"><!--Creating division for the welocme message.-->
+            <center><h1 class="write" id="1"><b>WELCOME TO MY PAGE.!</b></h1></center>
+            <h2 style="color: black;font-size: 30px;font-family: cursive;background-color: lavender;">
+                This is my first portfolio website. You can visit the other sections through the navigation bar above.
+                    I hope you like the pages and enjoy the content.<br>Thank You. Have a great time!
+            </h2>
+        </div> 
+        <br><br><br>
+        <footer>
+            &copy;2021 by Shreya Gurung, computing
+        </footer>
+        
+        <script>
+            //*To change the color of the text every 1.5 secs
+            function changeColor(){
+                var x=document.getElementById("1"); //calls the element with id 1
+                if(x.style.color=="yellow")        //if the color is yellow
+                x.style.color="gold";             //it displays gold 
+                else if(x.style.color=="gold")         //if its gold
+                x.style.color="red";                   //it displays red
+                else if(x.style.color=="red")           //if its red
+                x.style.color="lavenderblush";           //it displays lavenderblush
+                else if(x.style.color=="lavenderblush")   //if its lavenderblush
+                x.style.color="lawngreen";                //it displays lawngreen
+                else if(x.style.color=="lawngreen")        //if its lawn green
+                x.style.color="pink";                      //displays pink
+                else                                        //finally when its pink
+                x.style.color="yellow";                     //it displays yellow
+            }
+            setInterval(changeColor,1500);
+        </script>
+     
+    </body>
+</html>
